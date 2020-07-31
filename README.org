@@ -1,0 +1,33 @@
+#+TITLE:   biotk
+#+DATE:    January 15, 2020
+#+SINCE:   {replace with next tagged release version}
+#+STARTUP: inlineimages nofold
+
+* Table of Contents :TOC_3:noexport:
+- [[#description][Description]]
+- [[#prerequisites][Prerequisites]]
+- [[#features][Features]]
+- [[#configuration][Configuration]]
+- [[#troubleshooting][Troubleshooting]]
+
+* Description
+A fast toolkit for processing biological data
+
+* Prerequisites
+- Biology
+- Math
+- Computer Science
+
+* Features
+- compute record length from [[https://en.wikipedia.org/wiki/FASTA_format][FASTA]] file
+
+* Configuration
+#+BEGIN_SRC bash
+git clone https://github.com/alienzj/biotk
+cd biotk
+cargo build
+cargo run --
+#+END_SRC
+
+* Troubleshooting
+Feel free to make a [[https://github.com/alienzj/issues][issue]].
