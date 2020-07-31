@@ -1,4 +1,4 @@
-#+TITLE:   biotk
+#+TITLE:   microtk
 #+DATE:    January 15, 2020
 #+SINCE:   {replace with next tagged release version}
 #+STARTUP: inlineimages nofold
@@ -11,7 +11,7 @@
 - [[#troubleshooting][Troubleshooting]]
 
 * Description
-A fast toolkit for processing biological data
+A micro toolkit for microbiology
 
 * Prerequisites
 - Biology
@@ -23,11 +23,11 @@ A fast toolkit for processing biological data
 
 * Configuration
 #+BEGIN_SRC bash
-git clone https://github.com/alienzj/biotk
-cd biotk
+git clone https://github.com/alienzj/microtk
+cd microtk
 cargo build
 cargo run --
 #+END_SRC
 
 * Troubleshooting
-Feel free to make a [[https://github.com/alienzj/issues][issue]].
+Feel free to make a [[https://github.com/alienzj/microtk/issues][issue]].
