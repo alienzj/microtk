@@ -8,7 +8,13 @@ edition = "2018"
 bio = "0.31.0"
 niffler = "2.2.0"
 clap = "2.33.0"
+indicatif = "0.15.0"
+reqwest = "0.10.8"
 
 [[bin]]
 name = "microtk"
 path = "src/microtk.rs"
+
+[[bin]]
+name = "camisim_taxonomy"
+path = "src/camisim_taxonomy.rs"
