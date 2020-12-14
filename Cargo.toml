@@ -13,8 +13,4 @@ reqwest = "0.10.8"
 
 [[bin]]
 name = "microtk"
-path = "src/microtk.rs"
-
-[[bin]]
-name = "camisim_taxonomy"
-path = "src/camisim_taxonomy.rs"
+path = "src/main.rs"

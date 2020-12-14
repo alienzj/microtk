@@ -5,7 +5,6 @@
 
 * Table of Contents :TOC_3:noexport:
 - [[#description][Description]]
-- [[#prerequisites][Prerequisites]]
 - [[#features][Features]]
 - [[#configuration][Configuration]]
 - [[#troubleshooting][Troubleshooting]]
@@ -13,20 +12,15 @@
 * Description
 A micro toolkit for microbiology
 
-* Prerequisites
-- Biology
-- Math
-- Computer Science
-
 * Features
 - compute record length from [[https://en.wikipedia.org/wiki/FASTA_format][FASTA]] file
+- fix FASTQ error
 
 * Configuration
 #+BEGIN_SRC bash
 git clone https://github.com/alienzj/microtk
 cd microtk
 cargo build
-cargo run --
 #+END_SRC
 
 * Troubleshooting

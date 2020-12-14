@@ -1,6 +1,7 @@
 // https://github.com/natir/fpa/blob/master/src/file.rs
 use std::io;
 use std::io::{BufReader, BufWriter};
+use bio::io::{fasta, fastq};
 
 pub fn get_input(input_name: &str) -> (Box<dyn io::Read>, niffler::compression::Format) {
     match input_name {
@@ -48,7 +49,7 @@ pub fn revcomp(dna: &str) -> String {
         .collect::<String>()
 }
 
-fn switch_base(c: char) {
+fn switch_base(c: char) -> char {
     match c {
         'a' => 't',
         'c' => 'g',
@@ -63,3 +64,21 @@ fn switch_base(c: char) {
         _ => 'N',
     }
 }
+
+pub fn fastx_header(input: &str, output: &str) {
+    let (input_, compression) = get_input(input);
+    let reader = fastq::Reader::new(input_);
+
+    let writer: std::io::BufWriter<Box<dyn std::io::Write>> =
+        std::io::BufWriter::new(get_output(output, compression));
+
+    for result in reader.records() {
+        let record = result.expect("Error during fastx record parsing");
+        writer.write(record.id()).unwrap();
+    }
+
+}
+
+pub fn fastx_fixer(fastx: &str) {}
+
+pub fn fastx_len(fastx: &str) {}
