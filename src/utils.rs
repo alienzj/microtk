@@ -69,14 +69,13 @@ pub fn fastx_header(input: &str, output: &str) {
     let (input_, compression) = get_input(input);
     let reader = fastq::Reader::new(input_);
 
-    let writer: std::io::BufWriter<Box<dyn std::io::Write>> =
+    let mut writer: std::io::BufWriter<Box<dyn std::io::Write>> =
         std::io::BufWriter::new(get_output(output, compression));
 
     for result in reader.records() {
         let record = result.expect("Error during fastx record parsing");
-        writer.write(record.id()).unwrap();
+        println!("{}", record.id());
     }
-
 }
 
 pub fn fastx_fixer(fastx: &str) {}

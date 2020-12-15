@@ -5,11 +5,9 @@ authors = ["alienzj <alienchuj@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-bio = "0.31.0"
-niffler = "2.2.0"
-clap = "2.33.0"
-indicatif = "0.15.0"
-reqwest = "0.10.8"
+bio = "0.32.0"
+niffler = "2.3.1"
+clap = "3.0.0-beta.2"
 
 [[bin]]
 name = "microtk"
